@@ -44,3 +44,12 @@ local mainTab = Window:CreateTab("🏠 Home", nil) -- Title, Image
    Image = 4483362458,
 })
 
+local Button = mainTab:createslider({
+   Name = "Adjust peed",
+   Range = (16, 500),
+   Increment = 1,
+   Suffix = "Speed",
+   Callback = function(value)
+      game.players.localplayer.caracter.Humonoid.walkspeed = value
+   end,
+})
